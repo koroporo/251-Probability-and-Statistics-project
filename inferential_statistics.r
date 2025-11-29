@@ -81,13 +81,6 @@ print(cm)
 # Evaluate ROC curve
 roc_curve <- roc(testing$Is_Ad, probs)
 
-# library(ggplot2)
-# ggplot(data = data.frame(FPR = 1 - roc_curve$specificities, 
-#                          TPR = roc_curve$sensitivities), aes(x = FPR, y = TPR)) +
-#   geom_line(color = "blue", size = 1.2) +
-#   geom_abline(linetype = "dashed", color = "gray") +
-#   labs(title = "ROC Curve", x = "False Positive Rate", y = "True Positive Rate") +
-#   theme_minimal()
 
 plot(roc_curve, 
      main = "ROC Curve", 
